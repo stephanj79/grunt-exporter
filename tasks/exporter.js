@@ -12,10 +12,12 @@ module.exports = function (grunt) {
     grunt.registerMultiTask('exporter', 'Export Snippets from Page/File and include it in own file.', function () {
         var options = this.options({
             silent: "true",
-            banner: ""
+            banner: "",
+            jsonfile: ""
         });
 
         var regex = /[\/?\/?\*?]*<!--\(start-.*-export\s+([\w\/.\-]+)\s?[^>]*\)-->[\*?\/?]{0,2}([\w.-0-9\s()\n"';@:,!%&#{}]*)\s?\n?(\/\*)?<!--\(end-.*-export\)-->\*?\/?/ig;
+
 
         function notinObj(obj, value) {
             for (var i = 0; i < obj.length; i++) {
@@ -44,16 +46,18 @@ module.exports = function (grunt) {
         }
 
         function parse(string) {
-            var match = [];
+            var match;
             var valuesContainer = [];
             var values = {};
             var i = 0;
             while (match = regex.exec(string)) {
-                values = {};
-                values.id = i;
-                values.ziel = match[1];
-                values.text = match[2];
-                valuesContainer.push(values);
+                if (options.silent ? "" : grunt.log.success("1 Match Found!!! Copy to " + match[1])) {
+                    values = {};
+                    values.id = i;
+                    values.ziel = match[1];
+                    values.text = match[2];
+                    valuesContainer.push(values);
+                }
             }
             valuesContainer = prepare(valuesContainer);
             return valuesContainer;
@@ -68,7 +72,7 @@ module.exports = function (grunt) {
                     return true;
                 }
             }).map(function (filepath) {
-                if (options.silent ? "" : grunt.log.warn("\nRead File: " + filepath)) {
+                if (options.silent ? "" : grunt.log.writeln("\nRead File: " + filepath)) {
                     src = grunt.file.read(filepath);
                     src = parse(src);
                     for (var i = 0; i < src.length; i++) {
@@ -88,5 +92,8 @@ module.exports = function (grunt) {
                 }
             });
         });
+        if (options.silent ? "" : grunt.log.writeln("\n-----------------------------------------")) {
+
+        }
     });
 };
