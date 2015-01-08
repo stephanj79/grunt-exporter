@@ -132,12 +132,12 @@ alert("TEST");
 
 Create files:
 
-include/test.js
+* include/test.js
 ```js
 alert("TEST");
 ```
 
-include/ScrollTop.less
+* include/ScrollTop.less
 ```css
 .scroll-top {
   position: fixed;
@@ -151,7 +151,7 @@ include/ScrollTop.less
 }
 ```
 
-include/test.css
+* include/test.css
 ```css
 .site-footer-css {
   min-height: 180px;
