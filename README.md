@@ -149,9 +149,12 @@ alert("TEST");
 <!--(end-less-export)-->
 </style>
 
-<footer class="site-footer">
-<!-- what ever... -->
-</footer>
+<!--(start-html-export src/html/templates/footer.html)-->
+<footer class="test">
+    <a href="huiu" si="ujio">a</a>
+<footer>
+<!--(end-html-export)-->
+
 
 ```
 
@@ -199,6 +202,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 
 ## Release History
+* 0.0.9 include html export
 * 0.0.8 Bug fix
 * 0.0.7 Bug fix
 * 0.0.6 Bug fix * Regex
