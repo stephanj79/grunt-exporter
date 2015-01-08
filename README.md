@@ -202,6 +202,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 
 ## Release History
+* 0.1.0 Bug fix in html export
 * 0.0.9 include html export
 * 0.0.8 Bug fix
 * 0.0.7 Bug fix
