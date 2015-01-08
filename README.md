@@ -52,113 +52,6 @@ Default value: ``
 Banner for your files
 
 
-### Usage Examples
-
-```html
-Starttag    X=type   path/to/outputfile.X
-<!--(start-X-export includes/ScrollTop.less)-->
-  //Content here
-<--(end-X-export)-->
-^Endtag
-```
-**rename X with type like html,jade,js,css,scss,sass,less**
-
-
-
-
-master.html
-```html
-<header class="site-footer">
-
-</header>
-
-<!--(start-less-export includes/ScrollTop.less)-->
-.scroll-top {
-  position: fixed;
-  a:link, a:visited,a:hover {
-    text-decoration: none;
-    background: @MainColorLink;
-    i{
-      color:@MainColorBackground;
-    }
-  }
-}
-<--(end-less-export)-->
-
-<footer class="site-footer">
-
-</footer>
-
-<!--(start-less-export includes/footer.less)-->
-.site-footer {
-  background: @MainColorBackground;
-  min-height: @footerHoehe;
-  a:link, a:visited {
-    color: @MainColorLink !important;
-  }
-}
-<--(end-less-export)-->
-
-<style>
-/*<!--(start-css-export includes/test.css)-->*/
-.site-footer-css {
-  min-height: 180px;
-}
-/*<--(end-css-export)-->*/
-</style>
-
-<script>
-//<!--(start-js-export includes/test.js)-->
-alert("TEST");
-//<--(end-js-export)-->
-</script>
-
-```
-
-**In js files you can use "//" or in css "/*" if you want!**
-```js
-//<!--(start-js-export includes/test.js)-->
-alert("TEST");
-//<--(end-js-export)-->
-```
-```css
-/*<!--(start-css-export includes/test.css)-->*/
-.site-footer-css {
-  min-height: 180px;
-}
-/*<--(end-css-export)-->*/
-```
-
-
-Create files:
-
-* include/test.js
-```js
-alert("TEST");
-```
-
-* include/ScrollTop.less
-```css
-.scroll-top {
-  position: fixed;
-  a:link, a:visited,a:hover {
-    text-decoration: none;
-    background: @MainColorLink;
-    i{
-      color:@MainColorBackground;
-    }
-  }
-}
-```
-
-* include/test.css
-```css
-.site-footer-css {
-  min-height: 180px;
-}
-```
-
-
 #### Default Options
 In this example, the default options are used to do something with whatever. So if the `testing.html` file has the content-tag the content of this tags will be written to file
 
@@ -196,6 +89,110 @@ grunt.initConfig({
     }
   },
 });
+```
+
+
+### Usage in File
+
+```html
+Starttag    X=type   path/to/outputfile.X
+<!--(start-X-export includes/ScrollTop.less)-->
+  //Content here
+<--(end-X-export)-->
+^Endtag
+```
+**rename X with type like html,jade,js,css,scss,sass,less**
+
+
+### Usage Examples
+master.html
+```html
+
+<script>
+//<!--(start-js-export includes/test.js)-->
+alert("TEST");
+//<--(end-js-export)-->
+</script>
+
+<header class="site-footer">
+  <!-- what ever... -->
+</header>
+
+<!--(start-less-export includes/ScrollTop.less)-->
+.header {
+  position: fixed;
+  a:link, a:visited,a:hover {
+    text-decoration: none;
+    background: @MainColorLink;
+    i{
+      color:@MainColorBackground;
+    }
+  }
+}
+<--(end-less-export)-->
+
+
+<style>
+/*<!--(start-css-export includes/test.css)-->*/
+.site-footer-css {
+  min-height: 180px;
+}
+/*<--(end-css-export)-->*/
+
+<!--(start-less-export includes/footer.less)-->
+.site-footer {
+  background: @MainColorBackground;
+  min-height: @footerHoehe;
+  a:link, a:visited {
+    color: @MainColorLink !important;
+  }
+}
+<--(end-less-export)-->
+</style>
+
+<footer class="site-footer">
+<!-- what ever... -->
+</footer>
+
+```
+
+Create files:
+* include/test.js
+```js
+alert("TEST");
+```
+* include/ScrollTop.less
+```css
+.scroll-top {
+  position: fixed;
+  a:link, a:visited,a:hover {
+    text-decoration: none;
+    background: @MainColorLink;
+    i{
+      color:@MainColorBackground;
+    }
+  }
+}
+```
+* include/test.css
+```css
+.site-footer-css {
+  min-height: 180px;
+}
+```
+
+**In js files you can use "//" or in css "/*" if you want!**
+```js
+//<!--(start-js-export includes/test.js)-->
+alert("TEST");
+//<--(end-js-export)-->
+```
+```css
+/*<!--(start-css-export includes/test.css)-->*/
+.site-footer-css {
+  min-height: 180px;
+}
+/*<--(end-css-export)-->*/
 ```
 
 ## Contributing
