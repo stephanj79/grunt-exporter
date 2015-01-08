@@ -99,15 +99,20 @@ master.html
 }
 <--(end-less-export)-->
 
+<style>
 /*<!--(start-css-export includes/test.css)-->*/
 .site-footer-css {
   min-height: 180px;
 }
 /*<--(end-css-export)-->*/
+</style>
 
+<script>
 //<!--(start-js-export includes/test.js)-->
 alert("TEST");
 //<--(end-js-export)-->
+</script>
+
 ```
 
 **In js files you can use "//" or in css "/*" if you want!**
