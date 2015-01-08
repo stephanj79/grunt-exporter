@@ -100,7 +100,7 @@ master.html
 
 /*<!--(start-css-export includes/test.css)-->*/
 .site-footer-css {
-min-height: 180px;
+  min-height: 180px;
 }
 /*<--(end-css-export)-->*/
 
@@ -215,7 +215,7 @@ alert("TEST");
 <style>
 <!--(start-css-export includes/test.css)-->*/
 .site-footer-css {
-min-height: 180px;
+  min-height: 180px;
 }
 <--(end-css-export)-->*/
 </style>
@@ -223,3 +223,4 @@ min-height: 180px;
 
 ## INFO
 ** If there a 2 files that will export to one test.less so the first export will be override!!! **
+** 2 export tags in one file with the same destination will be merged!!! **
