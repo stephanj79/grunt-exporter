@@ -54,19 +54,21 @@ Banner for your files
 ### Usage Examples
 
 ```html
-Starttag    **X=type**   path/to/outputfile.**X**
-<!--(start-**X**-export includes/ScrollTop.less)-->
+Starttag    X=type   path/to/outputfile.X
+<!--(start-X-export includes/ScrollTop.less)-->
   //Content here
-<--(end-**X**-export)-->
+<--(end-X-export)-->
 ^Endtag
 ```
 **rename X with type like html,jade,js,css,scss,sass,less**
 
 
+
+
 master.html
 ```html
 <header class="site-footer">
-    <!--(bake includes/headerinner.html)-->
+
 </header>
 
 <!--(start-less-export includes/ScrollTop.less)-->
@@ -83,7 +85,7 @@ master.html
 <--(end-less-export)-->
 
 <footer class="site-footer">
-    <!--(bake includes/footerinner.html)-->
+ 
 </footer>
 
 <!--(start-less-export includes/footer.less)-->
