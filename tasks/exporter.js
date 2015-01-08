@@ -12,8 +12,7 @@ module.exports = function (grunt) {
     grunt.registerMultiTask('exporter', 'Export Snippets from Page/File and include it in own file.', function () {
         var options = this.options({
             silent: "true",
-            banner: "",
-            jsonfile: ""
+            banner: "/*\n * Export from\n * grunt-exporter\n * https://www.npmjs.com/package/grunt-exporter\n * https://github.com/stephanj79/grunt-exporter\n */\n\n"
         });
 
         var regex = /[\/?\/?\*?]*<!--\(start-.*-export\s+([\w\/.\-]+)\s?[^>]*\)-->[\*?\/?]{0,2}([\w.-0-9\s()\n"';@:,!%&#{}]*)\s?\n?(\/\*)?<!--\(end-.*-export\)-->\*?\/?/ig;
@@ -81,8 +80,6 @@ module.exports = function (grunt) {
                             src[i].text = src[i].text.substr(0, src[i].text.length - 2);
                         }
                         if (options.banner.length > 0 ? f.content = options.banner + src[i].text : f.content = src[i].text) {
-
-                            // Write the destination file.
                             grunt.file.write(f.dest, f.content);
                             if (!options.silent) {
                                 grunt.log.success('File "' + f.dest + '" created.');
@@ -92,7 +89,7 @@ module.exports = function (grunt) {
                 }
             });
         });
-        if (options.silent ? "" : grunt.log.writeln("\n-----------------------------------------")) {
+        if (options.silent ? "" : grunt.log.write("\n-----------------------------------------")) {
 
         }
     });

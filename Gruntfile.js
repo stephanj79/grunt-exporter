@@ -31,8 +31,7 @@ module.exports = function (grunt) {
         exporter: {
             dist: {
                 options: {
-                    silent: false,
-                    banner: "/* \n * MyBanner\n */"
+                    silent: false
                 },
                 files: {
                     src: ['test/fixtures/**/*', 'test/expected/**/*']

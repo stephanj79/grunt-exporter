@@ -61,7 +61,7 @@ grunt.initConfig({
        dist: {
          options: {
            silent: true,
-           banner: ""
+           banner: "/*\n * Export from\n * grunt-exporter\n * https://www.npmjs.com/package/grunt-exporter\n * https://github.com/stephanj79/grunt-exporter\n */\n\n"
          },
          files: {
            src: ['test/fixtures/testing.html']
@@ -82,7 +82,7 @@ grunt.initConfig({
   dist:{
       options: {
         silent: false,
-        banner: "/* \n * MyBanner\n */"
+        banner: "here my text..."
     },
     files: {
       src: ['test/fixtures/testing.html', 'test/expected/**/*.html', '/test/expected/**/*.js']
@@ -199,6 +199,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 
 ## Release History
+* 0.0.7 Bug fix
 * 0.0.6 Bug fix * Regex
 * 0.0.5 [Bug Fixed](https://github.com/stephanj79/grunt-exporter/issues/1)
 * 0.0.4 Bug fix
