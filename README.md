@@ -222,5 +222,5 @@ alert("TEST");
 ```
 
 ## INFO
-** If there a 2 files that will export to one test.less so the first export will be override!!! **
-** 2 export tags in one file with the same destination will be merged!!! **
+* **If there a 2 files that will export to one test.less so the first export will be override!!!**
+* **2 export tags in one file with the same destination will be merged!!!**
