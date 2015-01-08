@@ -148,7 +148,7 @@ include/ScrollTop.less
 include/test.css
 ```css
 .site-footer-css {
-min-height: 180px;
+  min-height: 180px;
 }
 ```
 
