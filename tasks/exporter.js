@@ -48,7 +48,6 @@ module.exports = function (grunt) {
             return newobj;
         }
 
-
         // Parses attribute string.
 
         function parse(string) {
