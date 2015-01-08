@@ -222,4 +222,4 @@ min-height: 180px;
 ```
 
 ## INFO
-**If there a 2 files that will create both in test.less so it will be override!!!**
+** If there a 2 files that will export to one test.less so the first export will be override!!! **
