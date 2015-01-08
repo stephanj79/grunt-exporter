@@ -85,7 +85,7 @@ master.html
 <--(end-less-export)-->
 
 <footer class="site-footer">
- 
+
 </footer>
 
 <!--(start-less-export includes/footer.less)-->
@@ -109,7 +109,7 @@ alert("TEST");
 //<--(end-js-export)-->
 ```
 
-In js files you can use "//" or in css "/*" if you want!
+**In js files you can use "//" or in css "/*" if you want!**
 ```js
 //<!--(start-js-export includes/test.js)-->
 alert("TEST");
@@ -118,7 +118,7 @@ alert("TEST");
 ```css
 /*<!--(start-css-export includes/test.css)-->*/
 .site-footer-css {
-min-height: 180px;
+  min-height: 180px;
 }
 /*<--(end-css-export)-->*/
 ```
@@ -148,7 +148,7 @@ include/ScrollTop.less
 include/test.css
 ```css
 .site-footer-css {
-min-height: @footerHoehe;
+min-height: 180px;
 }
 ```
 
