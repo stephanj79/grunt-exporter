@@ -54,13 +54,13 @@ Banner for your files
 ### Usage Examples
 
 ```html
-Starttag    X=type   path/to/outputfile.X
-<!--(start-X-export includes/ScrollTop.less)-->
+Starttag    **X=type**   path/to/outputfile.**X**
+<!--(start-**X**-export includes/ScrollTop.less)-->
   //Content here
-<--(end-X-export)-->
+<--(end-**X**-export)-->
 ^Endtag
 ```
-X = type like html,jade,js,css,scss,sass,less...
+**rename X with type like html,jade,js,css,scss,sass,less**
 
 
 master.html
