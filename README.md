@@ -103,6 +103,7 @@ Starttag    X=type   path/to/outputfile.X
 <--(end-X-export)-->
 ```
 ^Endtag
+
 **rename X with type like html,jade,js,css,scss,sass,less**
 
 
