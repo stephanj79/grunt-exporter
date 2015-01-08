@@ -378,7 +378,8 @@ grunt.initConfig({
 ```
 
 ## Contributing
-In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
+In lieu of a formal styleguide, take care to maintain the existing coding style.
+Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
 
 ## Release History
 0.0.3 Bug fix
@@ -403,3 +404,6 @@ min-height: 180px;
 <--(end-css-export)-->*/
 </style>
 ```
+
+## INFO
+If there a 2 files that will create both in test.less so it will be override!!!
