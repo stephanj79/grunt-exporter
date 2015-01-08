@@ -20,7 +20,7 @@ module.exports = function (grunt) {
             banner: ""
         });
 
-        var regex = /\/?\/?<!--\(start-.*-export\s+([\w\/.\-]+)\s?[^>]*\)-->([\w.-0-9\s(){}\n"';@:,!%&#]+)\s?\n?\/?\/?<--\(end-.*-export\)-->/ig;
+        var regex = /[\/?\/?\*?]*<!--\(start-.*-export\s+([\w\/.\-]+)\s?[^>]*\)-->[\*?\/?]{0,2}([\w.-0-9\s()\n"';@:,!%&#{}]*)\s?\n?(\/\*)?<--\(end-.*-export\)-->\*?\/?/ig;
 
         function notinObj(obj, value) {
             for (var i = 0; i < obj.length; i++) {
@@ -51,7 +51,7 @@ module.exports = function (grunt) {
         // Parses attribute string.
 
         function parse(string) {
-            //       var match = [];
+            var match = [];
             var valuesContainer = [];
             var values = {};
             var i = 0;
