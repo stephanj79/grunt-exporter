@@ -199,6 +199,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 
 ## Release History
+* 0.0.8 Bug fix
 * 0.0.7 Bug fix
 * 0.0.6 Bug fix * Regex
 * 0.0.5 [Bug Fixed](https://github.com/stephanj79/grunt-exporter/issues/1)
