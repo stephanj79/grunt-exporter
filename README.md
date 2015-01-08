@@ -263,9 +263,6 @@ X = type like html,jade,js,css,scss,sass,less...
 
 master.html
 ```html
-<header class="site-footer">
-    <!--(bake includes/headerinner.html)-->
-</header>
 
 <!--(start-less-export includes/ScrollTop.less)-->
 .scroll-top {
@@ -281,7 +278,7 @@ master.html
 <--(end-less-export)-->
 
 <footer class="site-footer">
-    <!--(bake includes/footerinner.html)-->
+    <!-- What ever...-->
 </footer>
 
 <!--(start-less-export includes/footer.less)-->
@@ -296,7 +293,7 @@ master.html
 
 <!--(start-css-export includes/test.css)-->
 .site-footer-css {
-min-height: @footerHoehe;
+min-height: 180px;
 }
 <--(end-css-export)-->
 
@@ -336,7 +333,7 @@ include/ScrollTop.less
 include/test.css
 ```css
 .site-footer-css {
-min-height: @footerHoehe;
+min-height: 180px;
 }
 ```
 
