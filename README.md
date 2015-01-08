@@ -197,10 +197,6 @@ alert("TEST");
 /*<!--(end-css-export)-->*/
 ```
 
-## Contributing
-In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
-
-
 ## Release History
 * 0.1.0 Bug fix in html export
 * 0.0.9 include html export
