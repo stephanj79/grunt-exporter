@@ -1,7 +1,7 @@
 
 # grunt-exporter
 
-> Export Snippets from "master" Page and include it in own file.
+> Export Snippets from Page/File and include it in its own file.
 
 ## Getting Started
 This plugin requires Grunt `~0.4.5`
@@ -21,7 +21,7 @@ grunt.loadNpmTasks('grunt-exporter');
 ## The "exporter" task
 
 ### Overview
-In your project's Gruntfile, add a section named `ExportFromMasterPage` to the data object passed into `grunt.initConfig()`.
+In your project's Gruntfile, add a section named `exporter` to the data object passed into `grunt.initConfig()`.
 
 ```js
 grunt.initConfig({
@@ -96,23 +96,31 @@ master.html
 }
 <--(end-less-export)-->
 
-<!--(start-css-export includes/test.css)-->
+/*<!--(start-css-export includes/test.css)-->*/
 .site-footer-css {
-min-height: @footerHoehe;
+min-height: 180px;
 }
-<--(end-css-export)-->
+/*<--(end-css-export)-->*/
 
-<!--(start-js-export includes/test.js)-->
+//<!--(start-js-export includes/test.js)-->
 alert("TEST");
-<--(end-js-export)-->
+//<--(end-js-export)-->
 ```
 
-In js files you can use "//" if you want!
+In js files you can use "//" or in css "/*" if you want!
 ```js
 //<!--(start-js-export includes/test.js)-->
 alert("TEST");
 //<--(end-js-export)-->
 ```
+```css
+/*<!--(start-css-export includes/test.css)-->*/
+.site-footer-css {
+min-height: 180px;
+}
+/*<--(end-css-export)-->*/
+```
+
 
 Create files:
 
@@ -378,4 +386,21 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 ## Release History
 0.0.1 Include "silent" + "banner" as Option
       Start Project
-      
+
+## Tips and Tricks
+use in html files
+```html
+<script>
+<!--(start-js-export includes/test.js)-->
+alert("TEST");
+<--(end-js-export)-->
+</script>
+
+<style>
+<!--(start-css-export includes/test.css)-->*/
+.site-footer-css {
+min-height: 180px;
+}
+<--(end-css-export)-->*/
+</style>
+```
