@@ -203,6 +203,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 
 ## Release History
+* 0.0.5 [Bug Fixed](https://github.com/stephanj79/grunt-exporter/issues/1)
 * 0.0.4 Bug fix
 * 0.0.3 Bug fix
 * 0.0.2 Bug fix

@@ -73,6 +73,9 @@ module.exports = function (grunt) {
                     src = parse(src);
                     for (var i = 0; i < src.length; i++) {
                         f.dest = src[i].ziel;
+                        if (src[i].text.charAt(src[i].text.length - 2) === '/') {
+                            src[i].text = src[i].text.substr(0, src[i].text.length - 2);
+                        }
                         if (options.banner.length > 0 ? f.content = options.banner + src[i].text : f.content = src[i].text) {
 
                             // Write the destination file.
