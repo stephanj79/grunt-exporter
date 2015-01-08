@@ -95,16 +95,11 @@ grunt.initConfig({
 ### Usage in File
 ```html
 Starttag    X=type   path/to/outputfile.X
-```
 <!--(start-X-export includes/ScrollTop.less)-->
-```html
   //Content here will be copy
-  ```
-<--(end-X-export)-->
-```html
+<!--(end-X-export)-->
 ^Endtag
 ```
-
 **rename X with type like html,jade,js,css,scss,sass,less**
 
 
@@ -115,7 +110,7 @@ master.html
 <script>
 //<!--(start-js-export includes/test.js)-->
 alert("TEST");
-//<--(end-js-export)-->
+//<!--(end-js-export)-->
 </script>
 
 <header class="site-footer">
@@ -133,7 +128,7 @@ alert("TEST");
     }
   }
 }
-<--(end-less-export)-->
+<!--(end-less-export)-->
 
 
 <style>
@@ -141,7 +136,7 @@ alert("TEST");
 .site-footer-css {
   min-height: 180px;
 }
-/*<--(end-css-export)-->*/
+/*<!--(end-css-export)-->*/
 
 <!--(start-less-export includes/footer.less)-->
 .site-footer {
@@ -151,7 +146,7 @@ alert("TEST");
     color: @MainColorLink !important;
   }
 }
-<--(end-less-export)-->
+<!--(end-less-export)-->
 </style>
 
 <footer class="site-footer">
@@ -189,14 +184,14 @@ alert("TEST");
 ```js
 //<!--(start-js-export includes/test.js)-->
 alert("TEST");
-//<--(end-js-export)-->
+//<!--(end-js-export)-->
 ```
 ```css
 /*<!--(start-css-export includes/test.css)-->*/
 .site-footer-css {
   min-height: 180px;
 }
-/*<--(end-css-export)-->*/
+/*<!--(end-css-export)-->*/
 ```
 
 ## Contributing
@@ -204,6 +199,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 
 ## Release History
+* 0.0.6 Bug fix * Regex
 * 0.0.5 [Bug Fixed](https://github.com/stephanj79/grunt-exporter/issues/1)
 * 0.0.4 Bug fix
 * 0.0.3 Bug fix
@@ -217,7 +213,7 @@ use in html files
 <script>
 <!--(start-js-export includes/test.js)-->
 alert("TEST");
-<--(end-js-export)-->
+<!--(end-js-export)-->
 </script>
 
 <style>
@@ -225,7 +221,7 @@ alert("TEST");
 .site-footer-css {
   min-height: 180px;
 }
-<--(end-css-export)-->*/
+<!--(end-css-export)-->*/
 </style>
 ```
 

@@ -1,7 +1,7 @@
 {
   "name": "grunt-exporter",
   "description": "Export Snippets from 'master' Page and include it in own file.",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "homepage": "https://github.com/stephanj79/grunt-exporter",
   "author": {
     "name": "Stephan Jäger",
