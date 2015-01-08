@@ -197,11 +197,11 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 
 ## Release History
-0.0.4 Bug fix
-0.0.3 Bug fix
-0.0.2 Bug fix
-0.0.1 Include "silent" + "banner" as Option
-      Start Project
+* 0.0.4 Bug fix
+* 0.0.3 Bug fix
+* 0.0.2 Bug fix
+* 0.0.1 Include "silent" + "banner" as Option
+* **Start Project**
 
 ## Tips and Tricks
 use in html files
