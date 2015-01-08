@@ -1,0 +1,42 @@
+{
+  "name": "grunt-exporter",
+  "description": "Export Snippets from 'master' Page and include it in own file.",
+  "version": "0.0.2",
+  "homepage": "https://github.com/stephanj79/grunt-exporter",
+  "author": {
+    "name": "Stephan Jäger",
+    "email": "jaeger1779@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stephanj79/grunt-exporter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/stephanj79/grunt-exporter/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/stephanj79/grunt-exporter/blob/master/LICENSE-MIT"
+    }
+  ],
+  "engines": {
+    "node": "=0.10.33"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "^0.9.2",
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt-contrib-nodeunit": "^0.3.3",
+    "grunt": "~0.4.5"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.5"
+  },
+  "keywords": [
+    "gruntplugin",
+    "export snippet to file"
+  ]
+}
