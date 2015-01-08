@@ -9,12 +9,7 @@
 'use strict';
 
 module.exports = function (grunt) {
-
-    // Please see the Grunt documentation for more information regarding task
-    // creation: http://gruntjs.com/creating-tasks
-
     grunt.registerMultiTask('exporter', 'Export Snippets from Page/File and include it in own file.', function () {
-        // Merge task-specific and/or target-specific options with these defaults.
         var options = this.options({
             silent: "true",
             banner: ""
@@ -47,8 +42,6 @@ module.exports = function (grunt) {
             }
             return newobj;
         }
-
-        // Parses attribute string.
 
         function parse(string) {
             var match = [];
