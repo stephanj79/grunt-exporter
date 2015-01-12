@@ -10,13 +10,14 @@
 
 module.exports = function (grunt) {
     grunt.registerMultiTask('exporter', 'Export Snippets from Page/File and include it in own file.', function () {
+        var banner;
+
         var options = this.options({
             silent: "true",
             banner: "/*\n * Export from\n * grunt-exporter\n * https://www.npmjs.com/package/grunt-exporter\n * https://github.com/stephanj79/grunt-exporter\n */\n\n"
         });
 
         var regex = /[\/\*]*<!--\(start-.*-export\s+([\w\/.\-]+)\s?[^>]*\)-->[\/\*]*([\w.-0-9\s\(\)\n"';@:,!%&#{}]*|[\w.-0-9\s\(\)\n"';@,%&#{}=$+->[\/\*]*]*|[\w.-0-9\s\(\)\n"'@:;!%&#{}=<>"]*)[\/\*]*<!--\(end-.*-export\)-->[\/\*]*/ig;
-
 
         function notinObj(obj, value) {
             for (var i = 0; i < obj.length; i++) {
@@ -62,6 +63,8 @@ module.exports = function (grunt) {
             return valuesContainer;
         }
 
+        banner = grunt.template.process(options.banner);
+
         this.files.forEach(function (f) {
             var src = f.src.filter(function (filepath) {
                 if (!grunt.file.exists(filepath)) {
@@ -76,10 +79,14 @@ module.exports = function (grunt) {
                     src = parse(src);
                     for (var i = 0; i < src.length; i++) {
                         f.dest = src[i].ziel;
+                        src[i].text = src[i].text.trim();
                         if (src[i].text.charAt(src[i].text.length - 2) === '/') {
                             src[i].text = src[i].text.substr(0, src[i].text.length - 2);
                         }
-                        if (options.banner.length > 0 ? f.content = options.banner + src[i].text : f.content = src[i].text) {
+                        if (src[i].text.charAt(src[i].text.length - 1) === '/') {
+                            src[i].text = src[i].text.substr(0, src[i].text.length - 1);
+                        }
+                        if (banner.length > 0 ? f.content = banner + src[i].text : f.content = src[i].text) {
                             grunt.file.write(f.dest, f.content);
                             if (!options.silent) {
                                 grunt.log.success('File "' + f.dest + '" created.');

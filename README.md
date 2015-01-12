@@ -198,6 +198,8 @@ alert("TEST");
 ```
 
 ## Release History
+* 0.1.2 Bug fix in js export
+* 0.1.1 Bug fix
 * 0.1.0 Bug fix in html export
 * 0.0.9 include html export
 * 0.0.8 Bug fix
