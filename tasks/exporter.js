@@ -15,7 +15,7 @@ module.exports = function (grunt) {
             banner: "/*\n * Export from\n * grunt-exporter\n * https://www.npmjs.com/package/grunt-exporter\n * https://github.com/stephanj79/grunt-exporter\n */\n\n"
         });
 
-        var regex = /[\/\*]*<!--\(start-.*-export\s+([\w\/.\-]+)\s?[^>]*\)-->[\/\*]*([\w.-0-9\s()\n"';@:,!%&#{}]*|[\w.-0-9\s()\n"'@:;!%&#{}=<>"]*)[\/\*]*<!--\(end-.*-export\)-->[\/\*]*/ig;
+        var regex = /[\/\*]*<!--\(start-.*-export\s+([\w\/.\-]+)\s?[^>]*\)-->[\/\*]*([\w.-0-9\s\(\)\n"';@:,!%&#{}]*|[\w.-0-9\s\(\)\n"';@,%&#{}=$+->[\/\*]*]*|[\w.-0-9\s\(\)\n"'@:;!%&#{}=<>"]*)[\/\*]*<!--\(end-.*-export\)-->[\/\*]*/ig;
 
 
         function notinObj(obj, value) {
