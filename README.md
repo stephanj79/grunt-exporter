@@ -19,6 +19,14 @@ Once the plugin has been installed, it may be enabled inside your Gruntfile with
 grunt.loadNpmTasks('grunt-exporter');
 ```
 
+#How to use:
+```html
+           X=type(css/less/js...)   path/to/outputfile.
+<!--(start-X-export includes/ScrollTop.X)--> // Starttag
+  //Content here will be copy
+<!--(end-X-export)-->   // Endtag
+```
+
 ## The "exporter" task
 
 ### Overview
@@ -198,18 +206,10 @@ alert("TEST");
 ```
 
 ## Release History
-* 0.1.2 Bug fix in js export
-* 0.1.1 Bug fix
-* 0.1.0 Bug fix in html export
-* 0.0.9 include html export
-* 0.0.8 Bug fix
-* 0.0.7 Bug fix
-* 0.0.6 Bug fix * Regex
-* 0.0.5 [Bug Fixed](https://github.com/stephanj79/grunt-exporter/issues/1)
-* 0.0.4 Bug fix
-* 0.0.3 Bug fix
-* 0.0.2 Bug fix
-* 0.0.1 Include "silent" + "banner" as Option
+* 1.0.0 **Final Release**
+  ...
+  ...
+  ...
 * **Start Project**
 
 
@@ -232,5 +232,5 @@ alert("TEST");
 ```
 
 ## INFO
-* **If there a 2 files that will export to one test.less so the first export will be override!!!**
-* **2 export tags in one file with the same destination will be merged!!!**
+* **If there a 2 files export to one the first export will be override!!!**
+* **If there a 2 export tags in one file with the same destination it will be merged!!!**
