@@ -21,11 +21,11 @@ grunt.loadNpmTasks('grunt-exporter');
 
 #How to use:
 ```html
-         X=type(css/less/js...)   path/to/outputfile.
-          \                     /
+        X=type(html/ja/css/less/...)   path/to/outputfile.
+         \                            /
 <!--(start-X-export includes/ScrollTop.X)--> // Starttag
-  //Content here will be copy
-<!--(end-X-export)-->   // Endtag
+  //Content                             \
+<!--(end-X-export)-->   // Endtag        X=type(html/ja/css/less/...)
 ```
 
 ## The "exporter" task
@@ -103,11 +103,11 @@ grunt.initConfig({
 
 ### Usage in File
 ```html
-Starttag     X=type   path/to/outputfile.X
-|           /        /
-<!--(start-X-export includes/ScrollTop.less)-->
-  //Content here will be copy
-<!--(end-X-export)-->
+Starttag   X=type(html/ja/css/less)   path/to/outputfile.X
+|          |                         /
+<!--(start-X-export includes/ScrollTop.X)-->
+  //Content                             \
+<!--(end-X-export)-->                    X=type(css/less/js...)
    \       /
     Endtag
 ```
