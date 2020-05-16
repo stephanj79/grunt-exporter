@@ -21,7 +21,8 @@ grunt.loadNpmTasks('grunt-exporter');
 
 #How to use:
 ```html
-           X=type(css/less/js...)   path/to/outputfile.
+         X=type(css/less/js...)   path/to/outputfile.
+          \                     /
 <!--(start-X-export includes/ScrollTop.X)--> // Starttag
   //Content here will be copy
 <!--(end-X-export)-->   // Endtag
