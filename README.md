@@ -103,11 +103,13 @@ grunt.initConfig({
 
 ### Usage in File
 ```html
-Starttag    X=type   path/to/outputfile.X
+Starttag     X=type   path/to/outputfile.X
+|           /        /
 <!--(start-X-export includes/ScrollTop.less)-->
   //Content here will be copy
 <!--(end-X-export)-->
-^Endtag
+   \       /
+    Endtag
 ```
 **rename X with type like html,jade,js,css,scss,sass,less**
 
